@@ -105,7 +105,7 @@ int main(int argc, char *argv[]){
 	}
 	if(argc == 4){
 		if(strcmp(argv[3],"-f")==0){
-		/* vlad version
+		
 			FILE *fsource1;
 		    FILE *fsource2;
 		    FILE *fsource3;
@@ -158,36 +158,7 @@ int main(int argc, char *argv[]){
 		    fclose(fsource3);
 		    liberer(elf1);
 		    liberer(elf2);
-		    liberer(elf3);*/
-
-		    //version de kirill
-		    FILE *f1;
-			FILE *f2;
-			f1=fopen(argv[1],"r");
-			f2=fopen(argv[2],"r");
-			Elf32_info elf1;
-			Elf32_info elf2;
-			initElf(&elf1,f1);
-			initElf(&elf2,f2);
-			/*if (elf1.header.e_shnum>elf2.header.e_shnum){
-				p2e6e8(elf1,elf2);
-			}else{
-				p2e6e8(elf2,elf1);
-			}
-			if (elf1.header.e_shnum>elf2.header.e_shnum){
-				p2e7(elf1,elf2);
-			}else{
-				p2e7(elf2,elf1);
-			}*/
-			if (elf1.header.e_shnum>elf2.header.e_shnum){
-				p2(elf1,elf2);
-			}else{
-				p2(elf2,elf1);
-			}
-			fclose(f1);
-			fclose(f2);
-			liberer(elf1);
-		    liberer(elf2);
+		    liberer(elf3);
 		}
 
 	}
