@@ -86,8 +86,8 @@ readelf "-S" "$repertoire/$fic" | sed -e "s/ //g"| sed '$d'| sed '$d' | sed '$d'
 	fi
 
 	 echo ""
-	./readelf "$repertoire/$fic" "-r" | sed -e "s/ //g"  | sed /^$/d| sed -e "s/0x//g"| sed -e "s/entrées/entrée/g" > a
- 	  readelf "-r" "$repertoire/$fic" | sed -e "s/ //g" | sed /^$/d | sed -e "s/entrées/entrée/g"| sed -e "s/0x//g" > b
+./readelf "$repertoire/$fic" "-r"|sed -e "s/ //g"|sed /^$/d|sed -e "s/0x//g"|sed -e "s/entrées/entrée/g" > a
+readelf "-r" "$repertoire/$fic"|sed -e "s/ //g"|sed /^$/d|sed -e "s/entrées/entrée/g"|sed -e "s/0x//g"|sed -e "s/puts//g"|sed -e "s/func//g"  > b
          ( diff -s a b ) > c
       
         var=`cat c`
