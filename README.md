@@ -10,4 +10,6 @@ bugs.pdf : Liste des ́eventuels bogues connus mais non resolus
 
 journal.pdf: journal
 
+descriptionTest.pdf: Liste et description des tests effectués
+
 Les fichiers tests sont mis dans le répertoire "tests"
